@@ -70,13 +70,20 @@ body {
     flex-shrink: 0;
 }
 
-/* 下一个方块 */
+/* 下一个方块和得分信息 - 水平布局 */
+.info-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
 .next-piece {
     text-align: center;
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     padding: 15px;
     border-radius: 12px;
     min-width: 120px;
+    flex: 1;
 }
 
 .next-piece .label {
@@ -98,6 +105,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: 1;
 }
 
 .score-item {
@@ -129,8 +137,9 @@ body {
 /* 游戏控制按钮 */
 .game-controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
+    justify-content: center;
 }
 
 .control-btn {
@@ -141,7 +150,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-width: 120px;
+    min-width: 80px;
 }
 
 .control-btn.primary {
@@ -192,10 +201,10 @@ body {
     min-width: 50px;
     min-height: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 .key-btn:active {

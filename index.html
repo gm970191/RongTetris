@@ -8,11 +8,6 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- 游戏头部 -->
-        <div class="game-header">
-            <h1>俄罗斯方块</h1>
-        </div>
-        
         <!-- 游戏主区域 - 水平布局 -->
         <div class="game-main">
             <!-- 左侧游戏区域 -->
@@ -22,25 +17,31 @@
             
             <!-- 右侧控制面板 -->
             <div class="control-panel">
-                <!-- 下一个方块 -->
-                <div class="next-piece">
-                    <span class="label">下一个</span>
-                    <canvas id="nextCanvas" width="80" height="80"></canvas>
+                <!-- 游戏标题 -->
+                <div class="game-header">
+                    <h1>俄罗斯方块</h1>
                 </div>
                 
-                <!-- 得分信息 -->
-                <div class="score-board">
-                    <div class="score-item">
-                        <span class="label">分数</span>
-                        <span class="value" id="score">0</span>
+                <!-- 下一个方块和得分信息 - 水平布局 -->
+                <div class="info-row">
+                    <div class="next-piece">
+                        <span class="label">下一个</span>
+                        <canvas id="nextCanvas" width="80" height="80"></canvas>
                     </div>
-                    <div class="score-item">
-                        <span class="label">等级</span>
-                        <span class="value" id="level">1</span>
-                    </div>
-                    <div class="score-item">
-                        <span class="label">行数</span>
-                        <span class="value" id="lines">0</span>
+                    
+                    <div class="score-board">
+                        <div class="score-item">
+                            <span class="label">分数</span>
+                            <span class="value" id="score">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">等级</span>
+                            <span class="value" id="level">1</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">行数</span>
+                            <span class="value" id="lines">0</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -83,25 +84,7 @@
             </div>
         </div>
         
-        <!-- 操作提示 - 简洁显示 -->
-        <div class="game-hints">
-            <div class="hint-item">
-                <span class="hint-key">←→</span>
-                <span class="hint-text">移动</span>
-            </div>
-            <div class="hint-item">
-                <span class="hint-key">↑</span>
-                <span class="hint-text">旋转</span>
-            </div>
-            <div class="hint-item">
-                <span class="hint-key">↓</span>
-                <span class="hint-text">加速</span>
-            </div>
-            <div class="hint-item">
-                <span class="hint-key">空格</span>
-                <span class="hint-text">硬降</span>
-            </div>
-        </div>
+
     </div>
     
     <script src="script.js"></script>
